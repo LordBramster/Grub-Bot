@@ -2,5 +2,4 @@
 
 # Grub-Bot
 
-Grub-Bot
-
+Restaurant Selection
