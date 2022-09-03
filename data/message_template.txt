@@ -1,0 +1,3 @@
+Here is your weekend grub of interest:
+{restaurant_choice}
+{email_prompt}
