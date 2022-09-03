@@ -17,7 +17,7 @@ def send_email():
         with smtplib.SMTP(smtp_server, smtp_port) as server:
             server.starttls()
             server.login(email_sf, email_k)
-            server.sendmail(email_sf, email_addr, msg.as_string())
+            server.sendmail(email_sa, email_addr, msg.as_string())
             server.quit()
         print('STMPLIB.SMTP SERVER SENDMAIL ... [DONE]')
 
