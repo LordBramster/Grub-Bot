@@ -25,5 +25,10 @@ jobs:
 
       - name: execute py script # run main.py
         env:
-          SOME_SECRET: ${{ secrets.SOME_SECRET }}
+          ENV_ESA: ${{ secrets.ENV_ESA }}
+          ENV_ESF: ${{ secrets.ENV_ESF }}
+          ENV_EK: ${{ secrets.ENV_EK }}
+          ENV_EC: ${{ secrets.ENV_EC }}
+          ENV_E_H: ${{ secrets.ENV_E_H }}
+          ENV_E_P: ${{ secrets.ENV_E_P }}
         run: python main.py
