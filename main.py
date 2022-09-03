@@ -19,6 +19,7 @@ def send_email():
             server.login(email_sf, email_k)
             server.sendmail(email_sf, email_addr, msg.as_string())
             server.quit()
+        print('STMPLIB.SMTP SERVER SENDMAIL ... [DONE]')
 
 
 def pull_random_food_category(food_types):
@@ -41,6 +42,15 @@ def push_update_score_tally(restaurant_selection, restaurant_dict):
     json.dump(restaurant_dict, open(restaurant_list, "w"))
 
 
+def pull_format_message_string(filename):
+    """ pull template string to format with args """
+    with open(filename, 'r') as file:
+        lines = file.read()
+        file.close()
+    formatted = lines.format(restaurant_choice=restaurant_choice, email_prompt=email_prompt)
+    return formatted
+
+
 if __name__ == '__main__':
     print('\n\n------------------------------------------------------------------')
 
@@ -55,7 +65,6 @@ if __name__ == '__main__':
 
     # PROCESS EMAIL DATA
     email_c_conv = json.loads(email_c)
-
     print('PROCESSED ENV VARS FOR EMAIL CREDS ... [PASSED]')
 
     # GRAB RESTAURANT CHOICE
@@ -70,12 +79,11 @@ if __name__ == '__main__':
     # MAKE MESSAGE
     email_prompts = open('./data/prompts.txt').readlines()
     email_prompt = email_prompts[random.randint(0, len(email_prompts) - 1)]
-    print('EMAIL RAND PROMPT SELECTED ... [PASSED]')
-    email_m = f"🍽️ Here is your weekend grub of interest:" \
-              f"\n{restaurant_choice}!" \
-              f"\n{email_prompt}" \
-              f"\t- {email_b}"
+    print('EMAIL RAND.INT PROMPT SELECTED ... [PASSED]')
+
+    email_m = pull_format_message_string('./data/message_template.txt')
     email_e = email_m.encode('utf-8')
+    print('PULL & AUTOFILL MESSAGE TEMPLATE ... [PASSED]')
 
     # SEND EMAIL
     print(f'\n{email_m}\n')
