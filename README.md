@@ -1,4 +1,4 @@
-<img src="https://img.icons8.com/color/344/hamburger.png">
+<img src="https://img.icons8.com/color/344/mcdonalds-french-fries.png">
 
 # Grub-Bot
 
