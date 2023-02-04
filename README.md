@@ -2,4 +2,4 @@
 
 # Grub-Bot
 
-Restaurant Selection
+A simple reminder service that sends out an email and SMS message, of a Restaurant recommendation, weekly.
