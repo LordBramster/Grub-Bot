@@ -1,4 +1,4 @@
-# <img width="4%" src="grub_bot-logo1.png"> Grub Recommendation SMS Bot
+# <img width="4%" src="grub_bot-logo1.png"> Grub Recommendation Bot (SMTP/SMS)
 
 > A simple weekly restaurant suggestion bot service. 
 
@@ -9,7 +9,7 @@
 <a href="#"><img alt="SMTP / SMS" src="https://custom-icon-badges.demolab.com/badge/SMTP%20/%20SMS-orange.svg?logo=server&logoColor=white&style=for-the-badge"></a>
 <a href="#"><img alt="Cron" src="https://img.shields.io/badge/Cron-372923.svg?logo=ubuntu&logoColor=white&style=for-the-badge"></a>
 
-**Uses GitHub Actions and a Cronjob Scheduler with SMTP/Email and SMS messaging services.**
+**Utilizes GitHub Actions and Cronjob Scheduling with SMTP/Email and SMS messaging services.**
 
 <hr/>
 
