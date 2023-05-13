@@ -56,8 +56,9 @@ if __name__ == '__main__':
 
     # CREDENTIALS
     config = json.load(open('./config.json', ))
-    stage = config['environment'].upper()
     print('\t > DONE | CONFIG.JSON LOADED ...')
+    stage = config['environment'].upper()
+    print(f'\t > LOG | ENV :: {stage}')
 
     try:
         if stage == 'DEV':
