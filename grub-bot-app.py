@@ -73,7 +73,7 @@ if __name__ == '__main__':
             email_c_conv = email_c
             print('\t > DONE | SECRET.JSON LOADED ...')
 
-        elif stage == 'PROD':
+        elif (stage == 'PROD') or (stage == 'TEST'):
             # PROD
             email_sa = os.environ['ENV_ESA']
             email_sf = os.environ['ENV_ESF']
@@ -108,7 +108,7 @@ if __name__ == '__main__':
             email_prompts = open('./data/prompts.txt').readlines()
             email_prompt = email_prompts[random.randint(0, len(email_prompts) - 1)]
         else:
-            # DEV
+            # DEV or TEST
             email_prompt = '< THIS MESSAGE IS PART OF A TEST, PLEASE DISREGARD >'
         print('\t > DONE | PROMPT HAS BEEN SELECTED ...')
 
@@ -126,7 +126,7 @@ if __name__ == '__main__':
             # DEV
             print(f'\t > ERR | {err} ...')
         else:
-            # PROD
+            # PROD or TEST
             print(f'\t > ERR | EXCEPTION HAS BEEN THROWN. MUTED FOR SECURITY ...')
 
     print('\n\t------------------------------------------------------------------')
