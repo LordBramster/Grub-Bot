@@ -49,8 +49,9 @@ Once the `Workflow Job` finishes, an SMS/SMTP message is sent to the available e
 - When the `Workflow Job` executes, it will pull the Secret from the repo into a local environment var on the server instance.
 - The script will ping each SMS/SMTP destination found within the converted list of Addresses.
 
+<br>
 <p align="center">
-    <a href="#"><img width="50%" src="./assets/demo_1.png"></a>
+    <a href="#"><img width="80%" src="./assets/demo_1.JPG"></a>
 </p>
 
 ## Resources
