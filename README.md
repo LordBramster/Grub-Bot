@@ -34,7 +34,7 @@ Have a good weekend!
 Have an A1 day!
 ```
 
-The script will randomly select on of these lines to be included within the message. The template is then parsed, and formatted with the appropriate variables.
+The script will randomly select on of these lines to be included within the message. The template is then parsed, and string formatted with the appropriate variables.
 Each message uses the standard template:
 ```
 Don't have a place in mind?
